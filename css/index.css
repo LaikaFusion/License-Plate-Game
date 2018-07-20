@@ -159,11 +159,12 @@ table {
 .top-bar {
   background: gray;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 10px;
 }
 .top-bar h1 {
+  text-align: center;
   font-family: 'license_plateregular', arial, sans-serif;
   font-size: 30px;
   margin: 10px;
@@ -237,7 +238,8 @@ table {
 }
 .all-license-plates .license-plate {
   margin: 10px;
-  width: 80px;
+  font-family: 'license_plateregular';
+  width: 90px;
   height: 30px;
   opacity: .8;
   background: white;
