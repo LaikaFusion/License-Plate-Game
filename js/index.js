@@ -112,18 +112,22 @@ const filterSeen = (whichFilter) =>{
 
 
 }
+
 //search system
 // Search button needed for Event Listener
-const searchButton = document.querySelector(".searchButton")
-// Search input field to get text data they are searching for
-const searchInputField = document.querySelector(".searchInputField")
+// const searchButton = document.querySelector(".searchButton")
+// // Search input field to get text data they are searching for
+// const searchInputField = document.querySelector(".searchInputField")
 
-// empty string containing our search data
-let searchInputData = "";
+// // empty string containing our search data
+// let searchInputData = "";
 
 // searchButton.addEventListener("click", () => {
 //     //.value gets search input text that they've typed
-//     searchInputData = searchInputField.value;
+//     searchInputData = searchInputField.value.toLowerCase();
+//     if (searchInputData == document.getElementById('AK')) {
+
+//     }
 //     console.log(searchInputData);
 // })
 
