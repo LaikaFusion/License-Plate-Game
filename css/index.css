@@ -270,7 +270,7 @@ table {
   cursor: pointer;
 }
 .all-license-plates .license-plate .hidden {
-  display: !important;
+  display: none !important;
 }
 .all-license-plates .found {
   background-color: rgba(38, 214, 56, 0.3);
