@@ -69,6 +69,7 @@ plates.forEach(element => {
 //score system 
 const score = (pointValue) => {
     totalScore += pointValue;
+    updateCookie();
     document.querySelector('.current-score').innerHTML = `${totalScore} / 50`;
 }
 
