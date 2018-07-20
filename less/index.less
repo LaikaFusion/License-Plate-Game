@@ -1,0 +1,66 @@
+@import 'mixins.less';
+
+.container {
+  border: 1px solid red;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-bar {
+  border: 1px solid green;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h2, .menu-icon {
+    border: 1px solid purple;
+    margin: 10px;
+  }
+}
+.scoreboard {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  h5 {
+    border: 1px solid purple;
+    padding: 10px;
+  }
+  .current-score {
+    border: 1px solid purple;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+}
+
+.search {
+  border: 1px solid yellow;
+  .center();
+  h5 {
+    border: 1px solid green;
+    padding: 10px;
+  }
+  .search-bar {
+    border: 1px solid blue;
+    height: 20px;
+    width: 50%;
+  }
+}
+
+.all-license-plates {
+  border: 1px solid pink;
+  display: flex;
+  flex-wrap: wrap;
+  // justify-content: flex-start;
+  // align-items: flex-start;
+  .license-plate {
+    margin: 10px;
+    width: 80px;
+    height: 30px;
+    background: teal;
+  }
+}
