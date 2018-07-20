@@ -114,22 +114,23 @@ const filterSeen = (whichFilter) =>{
 }
 
 //search system
-// Search button needed for Event Listener
-// const searchButton = document.querySelector(".searchButton")
-// // Search input field to get text data they are searching for
-// const searchInputField = document.querySelector(".searchInputField")
+const searchFunction = () => {
+    let searchInputField, searchInputFilter, stateCard, licensePlates, stateSpan;
+    searchInputField = document.querySelector(".searchInputField");
+    searchInputFilter = searchInputField.value.toLowerCase();
+    stateCard = document.querySelector(".all-license-plates");
+    licensePlates = stateCard.getElementsByTagName("div");
 
-// // empty string containing our search data
-// let searchInputData = "";
-
-// searchButton.addEventListener("click", () => {
-//     //.value gets search input text that they've typed
-//     searchInputData = searchInputField.value.toLowerCase();
-//     if (searchInputData == document.getElementById('AK')) {
-
-//     }
-//     console.log(searchInputData);
-// })
+    for (let i = 0; i < licensePlates.length; i++) {
+        stateSpan = licensePlates[i].querySelector("span");
+        console.log(stateSpan)
+        if (stateSpan.innerHTML.toLowerCase().indexOf(searchInputFilter) > -1) {
+            licensePlates[i].style.display = "";
+        } else {
+            licensePlates[i].style.display = "none";
+        }
+    }
+}
 
 
 //listeners
