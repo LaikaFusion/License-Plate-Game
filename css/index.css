@@ -155,6 +155,7 @@ table {
 .bottom-container {
   z-index: 0;
   overflow: auto;
+  background-image: image();
 }
 .top-bar {
   background: gray;
@@ -184,6 +185,8 @@ table {
   align-items: center;
   padding: 10px;
   margin: 10px;
+  font-size: 30px;
+  font-weight: bold;
 }
 .scoreboard .current-score {
   display: flex;
