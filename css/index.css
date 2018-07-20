@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'license_plateregular';
+  src: url('licenseplate-webfont.eot');
+  src: url('licenseplate-webfont.eot?#iefix') format('embedded-opentype'), url('licenseplate-webfont.woff2') format('woff2'), url('licenseplate-webfont.woff') format('woff'), url('licenseplate-webfont.ttf') format('truetype'), url('licenseplate-webfont.svg#license_plateregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 /*------------------------------------*\
 RESET
 \*------------------------------------*/
@@ -158,6 +165,7 @@ table {
 }
 .top-bar h1,
 .top-bar .menu-icon {
+  font-family: 'license_plateregular', arial, sans-serif;
   margin: 10px;
   color: white;
 }
@@ -181,27 +189,24 @@ table {
   font-size: 30px;
   font-weight: bold;
 }
-.search {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.search h5 {
-  border: 1px solid green;
-  padding: 10px;
-}
-.search .search-bar {
-  border: 1px solid blue;
-  height: 20px;
-  margin: 10px;
-}
 .filter {
-  border: 1px solid red;
+  border: 1px solid black;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 500px) {
+  .filter {
+    flex-direction: column;
+  }
+}
+.filter:hover {
+  background: white;
 }
 .filter .row {
-  border: 1px solid purple;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 .filter .btn {
   border: 1px solid green;
@@ -217,8 +222,27 @@ table {
   background: navy;
   color: white;
 }
+.search {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+@media (max-width: 500px) {
+  .search {
+    flex-direction: column;
+  }
+}
+.search h5 {
+  border: 1px solid green;
+  padding: 10px;
+}
+.search .search-bar {
+  border: 1px solid blue;
+  height: 20px;
+  margin: 10px;
+}
 .all-license-plates {
-  border: 1px solid pink;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -229,6 +253,10 @@ table {
   height: 30px;
   opacity: .8;
   background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 .all-license-plates .license-plate:hover {
   opacity: 1;

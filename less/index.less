@@ -1,4 +1,5 @@
 @import 'mixins.less';
+@import 'variables.less';
 @import 'reset.less';
 
 .container {
@@ -31,10 +32,12 @@
   padding: 10px;
   h1, .menu-icon {
     // border: 1px solid purple;
+    font-family: 'license_plateregular', arial, sans-serif;
     margin: 10px;
     color: white;
   }
 }//top-bar
+
 .scoreboard {
   // border: 1px solid red;
   display: flex;
@@ -57,26 +60,23 @@
   }//current-score
 }//scoreboard
 
-.search {
-  // border: 1px solid yellow;
-  .center();
-  h5 {
-    border: 1px solid green;
-    padding: 10px;
-  }
-  .search-bar {
-    border: 1px solid blue;
-    height: 20px;
-    margin: 10px;
-  }//search-bar
-}//search
-
 .filter {
-  border: 1px solid red;
+  border: 1px solid black;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  @media @small {
+    flex-direction: column;
+  }
+  &:hover {
+    background: white;
+  }
   .row {
-    border: 1px solid purple;
+    // border: 1px solid purple;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+
   }//rox
   .btn {
     border: 1px solid green;
@@ -94,8 +94,28 @@
   }//selected
 }//filter
 
+.search {
+  // border: 1px solid yellow;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  @media @small {
+    flex-direction: column;
+  }
+  h5 {
+    border: 1px solid green;
+    padding: 10px;
+  }
+  .search-bar {
+    border: 1px solid blue;
+    height: 20px;
+    margin: 10px;
+  }//search-bar
+}//search
+
 .all-license-plates {
-  border: 1px solid pink;
+  // border: 1px solid pink;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -105,6 +125,8 @@
     height: 30px;
     opacity: .8;
     background: white;
+    .center;
+    text-align: center;
     &:hover{
       opacity: 1;
     }
