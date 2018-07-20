@@ -11,11 +11,11 @@
   position: sticky;
   top: 0;
   background: lightgray;
-  z-index: 2;
+  z-index: 5;
 }
 
 .bottom-container {
-  z-index: 1;
+  z-index: 0;
   overflow: auto;
 
 }
@@ -118,24 +118,48 @@
   justify-content: center;
   flex-wrap: wrap;
   .license-plate {
-    margin: 10px;
+    border: 1px solid green;
+    // margin: 10px;
     font-family: 'license_plateregular';
-    width: 90px;
-    height: 30px;
+    min-width: 150px;
+    max-width: 25%;
+    min-height: 100px;
+    max-height: 536px;
     opacity: .8;
     background: white;
-    .center;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    box-sizing: border-box;
     &:hover{
       background-color: rgba(239, 239, 239, 1);
       border: .5px solid gray;
       box-sizing: border-box;
       cursor: pointer;
     }
-    .hidden {
-      display: none !important;
+    .plateImage {
+      width: 100%;
+      height: auto;
+      z-index: 1;
+      // opacity: .4;
+      &:hover{
+      opacity: 1;
+      }
     }
-
+    .licensePlateTitle {
+      border: 1px solid blue;
+      color: black;
+      font-weight: bold;
+      font-size: 34px;
+      z-index: 3;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      &:hover{
+        z-index: 20;
+      }
+    }
   }//license-plate
   .found {
     background-color: rgba(38, 214, 56, .3);
@@ -145,6 +169,6 @@
   }
 }//all-license-plate
 
-.hidden {
-  display: none !important;
-}
+// .hidden {
+//   display: none !important;
+// }
