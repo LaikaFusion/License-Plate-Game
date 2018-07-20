@@ -1,2 +1,5 @@
 
-console.log(plates);
+
+document.getElementsByClassName("current-score").innerHTML=plates.map(Element => { 
+    return Element;
+})

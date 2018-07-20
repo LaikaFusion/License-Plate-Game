@@ -1,203 +1,351 @@
-const plates = [
-    {
+let plates = [{
         "name": "Alabama",
         "abbreviation": "AL",
-        "pointValue": 1
+        "pointValue": 1,
+        "img": "",
+        "sited": false
     },
     {
         "name": "Alaska",
-        "abbreviation": "AK"
+        "abbreviation": "AK",
+        "pointValue": 1,
+        "img": "",
+        "sited": false
     },
     {
         "name": "Arizona",
-        "abbreviation": "AZ"
+        "abbreviation": "AZ",
+        "pointValue": 1,
+        "img": "",
+        "sited": false
     },
     {
         "name": "Arkansas",
-        "abbreviation": "AR"
+        "abbreviation": "AR",
+        "pointValue": 1,
+        "img": "",
+        "sited": false
     },
     {
         "name": "California",
-        "abbreviation": "CA"
+        "abbreviation": "CA",
+        "pointValue": 1,
+        "img": "",
+        "sited": false
     },
     {
         "name": "Colorado",
-        "abbreviation": "CO"
+        "abbreviation": "CO",
+        "pointValue": 1,
+        "img": "",
+        "sited": false
     },
     {
         "name": "Connecticut",
-        "abbreviation": "CT"
+        "abbreviation": "CT",
+        "pointValue": 1,
+        "img": "",
+        "sited": false
     },
     {
         "name": "Delaware",
-        "abbreviation": "DE"
+        "abbreviation": "DE",
+        "pointValue": 1,
+        "img": "",
+        "sited": false
     },
     {
         "name": "Florida",
-        "abbreviation": "FL"
+        "abbreviation": "FL",
+        "pointValue": 1,
+        "img": "",
+        "sited": false
     },
     {
         "name": "Georgia",
-        "abbreviation": "GA"
+        "abbreviation": "GA",
+        "pointValue": 1,
+        "img": "",
+        "sited": false
     },
     {
         "name": "Hawaii",
-        "abbreviation": "HI"
+        "abbreviation": "HI",
+        "pointValue": 1,
+        "img": "",
+        "sited": false
     },
     {
         "name": "Idaho",
-        "abbreviation": "ID"
+        "abbreviation": "ID",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     },
     {
         "name": "Illinois",
-        "abbreviation": "IL"
+        "abbreviation": "IL",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     },
     {
         "name": "Indiana",
-        "abbreviation": "IN"
+        "abbreviation": "IN",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     },
     {
         "name": "Iowa",
-        "abbreviation": "IA"
+        "abbreviation": "IA",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     },
     {
         "name": "Kansas",
-        "abbreviation": "KS"
+        "abbreviation": "KS",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     },
     {
         "name": "Kentucky",
-        "abbreviation": "KY"
+        "abbreviation": "KY",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     },
     {
         "name": "Louisiana",
-        "abbreviation": "LA"
+        "abbreviation": "LA",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     },
     {
         "name": "Maine",
-        "abbreviation": "ME"
+        "abbreviation": "ME",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     },
     {
         "name": "Maryland",
-        "abbreviation": "MD"
+        "abbreviation": "MD",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     },
     {
         "name": "Massachusetts",
-        "abbreviation": "MA"
+        "abbreviation": "MA",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     },
     {
         "name": "Michigan",
-        "abbreviation": "MI"
+        "abbreviation": "MI",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     },
     {
         "name": "Minnesota",
-        "abbreviation": "MN"
+        "abbreviation": "MN",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     },
     {
         "name": "Mississippi",
-        "abbreviation": "MS"
+        "abbreviation": "MS",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     },
     {
         "name": "Missouri",
-        "abbreviation": "MO"
+        "abbreviation": "MO",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     },
     {
         "name": "Montana",
-        "abbreviation": "MT"
+        "abbreviation": "MT",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     },
     {
         "name": "Nebraska",
-        "abbreviation": "NE"
+        "abbreviation": "NE",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     },
     {
         "name": "Nevada",
-        "abbreviation": "NV"
+        "abbreviation": "NV",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     },
     {
         "name": "New Hampshire",
-        "abbreviation": "NH"
+        "abbreviation": "NH",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     },
     {
         "name": "New Jersey",
-        "abbreviation": "NJ"
+        "abbreviation": "NJ",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     },
     {
         "name": "New Mexico",
-        "abbreviation": "NM"
+        "abbreviation": "NM",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     },
     {
         "name": "New York",
-        "abbreviation": "NY"
+        "abbreviation": "NY",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     },
     {
         "name": "North Carolina",
-        "abbreviation": "NC"
+        "abbreviation": "NC",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     },
     {
         "name": "North Dakota",
-        "abbreviation": "ND"
+        "abbreviation": "ND",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     },
     {
         "name": "Ohio",
-        "abbreviation": "OH"
+        "abbreviation": "OH",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     },
     {
         "name": "Oklahoma",
-        "abbreviation": "OK"
+        "abbreviation": "OK",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     },
     {
         "name": "Oregon",
-        "abbreviation": "OR"
+        "abbreviation": "OR",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     },
     {
         "name": "Pennsylvania",
-        "abbreviation": "PA"
+        "abbreviation": "PA",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     },
     {
         "name": "Rhode Island",
-        "abbreviation": "RI"
+        "abbreviation": "RI",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     },
     {
         "name": "South Carolina",
-        "abbreviation": "SC"
+        "abbreviation": "SC",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     },
     {
         "name": "South Dakota",
-        "abbreviation": "SD"
+        "abbreviation": "SD",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     },
     {
         "name": "Tennessee",
-        "abbreviation": "TN"
+        "abbreviation": "TN",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     },
     {
         "name": "Texas",
-        "abbreviation": "TX"
+        "abbreviation": "TX",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     },
     {
         "name": "Utah",
-        "abbreviation": "UT"
+        "abbreviation": "UT",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     },
     {
         "name": "Vermont",
-        "abbreviation": "VT"
+        "abbreviation": "VT",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     },
     {
         "name": "Virginia",
-        "abbreviation": "VA"
+        "abbreviation": "VA",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     },
     {
         "name": "Washington",
-        "abbreviation": "WA"
+        "abbreviation": "WA",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     },
     {
         "name": "West Virginia",
-        "abbreviation": "WV"
+        "abbreviation": "WV",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     },
     {
         "name": "Wisconsin",
-        "abbreviation": "WI"
+        "abbreviation": "WI",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     },
     {
         "name": "Wyoming",
-        "abbreviation": "WY"
+        "abbreviation": "WY",
+        "pointValue": 1,
+        "img": "",
+        "sited": false,
     }
 ]
