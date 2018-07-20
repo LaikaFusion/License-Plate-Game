@@ -231,14 +231,14 @@ table {
   justify-content: center;
   align-items: center;
 }
-.filter .found {
+.filter #Found {
   background-color: rgba(38, 214, 56, 0.3);
   color: black;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.filter .missing {
+.filter #Missing {
   background-color: rgba(255, 132, 132, 0.3);
 }
 .filter .search-bar {
@@ -268,6 +268,9 @@ table {
   border: .5px solid gray;
   box-sizing: border-box;
   cursor: pointer;
+}
+.all-license-plates .license-plate .hidden {
+  display: !important;
 }
 .all-license-plates .found {
   background-color: rgba(38, 214, 56, 0.3);
