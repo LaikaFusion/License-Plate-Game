@@ -124,7 +124,7 @@ const searchFunction = () => {
     for (let i = 0; i < licensePlates.length; i++) {
         stateSpan = licensePlates[i].querySelector("span");
         console.log(stateSpan)
-        if (stateSpan.innerHTML.toLowerCase().indexOf(searchInputFilter) > -1) {
+        if (stateSpan.innerHTML.toLowerCase().indexOf(searchInputFilter) === 0) {
             licensePlates[i].style.display = "";
         } else {
             licensePlates[i].style.display = "none";
