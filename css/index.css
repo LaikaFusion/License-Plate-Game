@@ -134,29 +134,38 @@ table {
   border-spacing: 0;
 }
 .container {
-  border: 1px solid red;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  background: lightgray;
+}
+.top-containter {
+  position: sticky;
+  top: 0;
+  background: lightgray;
+  z-index: 2;
+}
+.bottom-container {
+  z-index: 1;
+  overflow: auto;
 }
 .top-bar {
-  border: 1px solid green;
+  background: gray;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px;
 }
-.top-bar h2,
+.top-bar h1,
 .top-bar .menu-icon {
-  border: 1px solid purple;
   margin: 10px;
+  color: white;
 }
 .scoreboard {
-  border: 1px solid black;
   display: flex;
   justify-content: center;
 }
 .scoreboard h5 {
-  border: 1px solid purple;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -164,7 +173,6 @@ table {
   margin: 10px;
 }
 .scoreboard .current-score {
-  border: 1px solid purple;
   margin: 10px;
   display: flex;
   justify-content: center;
@@ -174,7 +182,6 @@ table {
   font-weight: bold;
 }
 .search {
-  border: 1px solid yellow;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -221,7 +228,7 @@ table {
   width: 80px;
   height: 30px;
   opacity: .8;
-  background: #C0c0c0;
+  background: white;
 }
 .all-license-plates .license-plate:hover {
   opacity: 1;
@@ -229,4 +236,8 @@ table {
 .all-license-plates .found {
   background-color: green;
   opacity: .3;
+}
+.all-license-plates .missing {
+  background-color: red;
+  opacity: .1;
 }
