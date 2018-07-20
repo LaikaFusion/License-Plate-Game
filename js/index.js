@@ -1,9 +1,10 @@
 //document selectors
 const licenesePlateArea = document.querySelector(".all-license-plates");
+const filterButtons = document.querySelectorAll(".filterBtn");
 
 //classes
-class PlateCard{
-    constructor(element){
+class PlateCard {
+    constructor(element) {
         this.element = element;
         this.name = element.name;
         this.abbreviation = element.abbreviation;
@@ -11,24 +12,23 @@ class PlateCard{
         this.pointValue = element.pointValue;
         this.found = false;
     }
-        
-    seenToggle(){
-        if(this.seen){
+
+    seenToggle() {
+        if (this.seen) {
             this.seen = false;
-            if(document.getElementById(`${this.abbreviation}`).classList.contains('found')){
+            if (document.getElementById(`${this.abbreviation}`).classList.contains('found')) {
                 document.getElementById(`${this.abbreviation}`).classList.remove('found');
                 score(-this.pointValue);
 
             }
-            
-        }
-        else{
+
+        } else {
             this.seen = true;
             document.getElementById(`${this.abbreviation}`).classList.add('found');
             score(this.pointValue);
         }
     }
-    createCard(){
+    createCard() {
         let divConstr = document.createElement("div");
         divConstr.className = "license-plate";
         divConstr.setAttribute('id', `${this.abbreviation}`);
@@ -42,9 +42,9 @@ class PlateCard{
         divConstr.appendChild(plateImg);
         divConstr.addEventListener('click', () => {
             this.seenToggle();
-          });   
+        });
         licenesePlateArea.appendChild(divConstr);
-        
+
     }
 
 }
@@ -57,12 +57,58 @@ plates.forEach(element => {
 
 //functions
 
+//score system 
 let totalScore = 0;
-
-
-const score = (pointValue) =>{
-
+const score = (pointValue) => {
     totalScore += pointValue;
-    document.querySelector('.current-score').innerHTML = totalScore;
+    document.querySelector('.current-score').innerHTML = `${totalScore} / 50`;
+}
 
+const filterSeen = (whichFilter) =>{
+    const foundPlates  = document.querySelectorAll(".license-plate ");
+    for (let index = 0; index < filterButtons.length; index++) {
+       filterButtons[index].classList.remove('selected');
+        
+    }
+    document.querySelector(`#${whichFilter}`).classList.add('selected');
+    switch (whichFilter) {
+        case "Missing":
+        
+        for (let index = 0; index < foundPlates.length; index++) {
+            if(foundPlates[index].classList.contains('found')){
+                foundPlates[index].classList.add('hidden');
+            }
+            else{
+                foundPlates[index].classList.remove('hidden');
+            }     
+        }
+            break;
+        
+        case "Found":
+            
+            for (let index = 0; index < foundPlates.length; index++) {
+                if(foundPlates[index].classList.contains('found') !== true){
+                    foundPlates[index].classList.add('hidden');
+                }
+                else{
+                    foundPlates[index].classList.remove('hidden');
+                }       
+            }
+            break;
+        default:
+        for (let index = 0; index < foundPlates.length; index++) {
+            foundPlates[index].classList.remove('hidden');
+        }
+            console.log('Something went wrong');
+            break;
+    }
+
+
+}
+
+//listeners 
+
+for (let index = 0; index < filterButtons.length; index++) {
+    filterButtons[index].addEventListener('click', () => { filterSeen(filterButtons[index].id)});
+    
 }

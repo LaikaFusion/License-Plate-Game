@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-      <meta charset="utf-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>License Plate Game</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" type="text/css" href="css\fonts\webfontkit-20180720-133218\stylesheet.css">
-      <link rel="stylesheet" type="text/css" media="screen" href="css/index.css" />
-      <script src="js/plateStore.js"></script>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>License Plate Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css\fonts\webfontkit-20180720-133218\stylesheet.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/index.css" />
+    <script src="js/plateStore.js"></script>
 
-  </head>
+</head>
 
-  <body>
+<body>
 
     <div class="container">
+
 
       <div class="top-containter">
 
@@ -35,9 +36,9 @@
             <h6>Show plates that are: </h6>
           </div>
           <div class="row">
-            <div class="btn selected">All</div>
-            <div class="btn missing">Missing</div>
-            <div class="btn found">Found</div>
+            <div id="All" class="btn filterBtn selected">All</div>
+            <div id="Missing" class="btn filterBtn">Missing</div>
+            <div  id="Found"class="btn filterBtn">Found</div>
           </div><!--row-->
         </div><!--filter-->
 
@@ -69,5 +70,6 @@
     </div><!--container-->
 
     <script src="js/index.js"></script>
-  </body>
+</body>
+
 </html>
