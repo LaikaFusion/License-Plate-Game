@@ -11,7 +11,7 @@
   position: sticky;
   top: 0;
   background: lightgray;
-  z-index: 5;
+  z-index: 10;
 }
 
 .bottom-container {
@@ -119,43 +119,57 @@
   flex-wrap: wrap;
   .license-plate {
     border: 1px solid green;
-    // margin: 10px;
+    margin: 10px;
     font-family: 'license_plateregular';
-    min-width: 150px;
-    max-width: 25%;
-    min-height: 100px;
-    max-height: 536px;
+    // min-width: 150px;
+    // max-width: 25%;
+    // min-height: 100px;
+    // max-height: 536px;
+    width: 300px;
+    height: 300px;
     opacity: .8;
     background: white;
-    display: flex;
+    // display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 0;
+    z-index: 1;
     box-sizing: border-box;
     &:hover{
-      background-color: rgba(239, 239, 239, 1);
-      border: .5px solid gray;
+      // background-color: rgba(239, 239, 239, 1);
       box-sizing: border-box;
+      border: 5px solid gray;
       cursor: pointer;
     }
     .plateImage {
+      // width: 100%;
+      // height: 200px;
+      // height: auto;
       width: 100%;
       height: auto;
-      z-index: 1;
+      z-index: 2;
       // opacity: .4;
-      &:hover{
-      opacity: 1;
-      }
+    }
+    .plate-status {
+      width: 200px;
+      height: 200px;
+      .center;
+      position: absolute;
+      background-color: red;
+      background-color: rgba(38, 214, 56, .3);
+      z-index: 3;
     }
     .licensePlateTitle {
       border: 1px solid blue;
       color: black;
       font-weight: bold;
       font-size: 34px;
-      z-index: 3;
+      padding: 5px;
+      z-index: 4;
       position: absolute;
       display: flex;
       align-items: center;
+      justify-content: center;
+
       &:hover{
         z-index: 20;
       }
