@@ -17,13 +17,13 @@
 .bottom-container {
   z-index: 1;
   overflow: auto;
+
 }
 
 .top-bar {
   // border: 1px solid green;
   background: gray;
   display: flex;
-  // justify-content: space-between;
   justify-content: center;
   align-items: center;
   padding: 10px;
@@ -73,28 +73,37 @@
     flex-direction: column;
   }
   .row {
-    border: 1px solid purple;
+    // border: 1px solid purple;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
   }//rox
   .btn {
-    border: 1px solid green;
+    border: 1px solid gray;
+    font-family: 'license_plateregular';
     padding: 3px 10px;
     margin: 10px;
+    background: white;
+    .center;
     &:hover{
-      background: navy;
-      opacity: .3;
       color: white;
     }
   }//btn
   .selected{
-    background: navy;
-    color: white;
+    border: 2.5px solid gray;
+    .center;
   }//selected
+  .found {
+    background-color: rgba(38, 214, 56, .3);
+    color: black;
+    .center();
+  }
+  .missing {
+    background-color: rgba(255, 132, 132, .3);
+  }
   .search-bar {
-    border: 1px solid blue;
+    // border: 1px solid blue;
     height: 20px;
     margin: 10px;
     width: 100%;
@@ -116,18 +125,17 @@
     .center;
     text-align: center;
     &:hover{
-      opacity: 1;
+      background-color: rgba(239, 239, 239, 1);
     }
   }//license-plate
   .found {
-    background-color: green;
-    opacity: .3;
+    background-color: rgba(38, 214, 56, .3);
   }
   .missing {
-    background-color: red;
-    opacity: .1;
+    background-color: rgba(255, 132, 132, .3);
   }
 }//all-license-plate
+
 
 
 .hidden {
