@@ -65,24 +65,40 @@ const score = (pointValue) => {
 }
 
 const filterSeen = (whichFilter) =>{
-
+    const foundPlates  = document.querySelectorAll(".license-plate ");
+    for (let index = 0; index < filterButtons.length; index++) {
+       filterButtons[index].classList.remove('selected');
+        
+    }
+    document.querySelector(`#${whichFilter}`).classList.add('selected');
     switch (whichFilter) {
-        case Missing:
-            
+        case "Missing":
+        
+        for (let index = 0; index < foundPlates.length; index++) {
+            if(foundPlates[index].classList.contains('found')){
+                foundPlates[index].classList.add('hidden');
+            }
+            else{
+                foundPlates[index].classList.remove('hidden');
+            }     
+        }
             break;
         
-        case Found:
-            const foundPlates  = document.querySelectorAll(".license-plate ");
-            foundPlates.forEach;
+        case "Found":
+            
             for (let index = 0; index < foundPlates.length; index++) {
                 if(foundPlates[index].classList.contains('found') !== true){
                     foundPlates[index].classList.add('hidden');
-
                 }
-                
+                else{
+                    foundPlates[index].classList.remove('hidden');
+                }       
             }
             break;
         default:
+        for (let index = 0; index < foundPlates.length; index++) {
+            foundPlates[index].classList.remove('hidden');
+        }
             console.log('Something went wrong');
             break;
     }
