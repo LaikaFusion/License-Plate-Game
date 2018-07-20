@@ -2,6 +2,12 @@
 const licenesePlateArea = document.querySelector(".all-license-plates");
 const filterButtons = document.querySelectorAll(".filterBtn");
 
+
+//global variables
+
+let totalScore = 0;
+let found = [];
+
 //classes
 class PlateCard {
     constructor(element) {
@@ -10,7 +16,6 @@ class PlateCard {
         this.abbreviation = element.abbreviation;
         this.img = element.img;
         this.pointValue = element.pointValue;
-        this.found = false;
     }
 
     seenToggle() {
@@ -19,14 +24,15 @@ class PlateCard {
             if (document.getElementById(`${this.abbreviation}`).classList.contains('found')) {
                 document.getElementById(`${this.abbreviation}`).classList.remove('found');
                 score(-this.pointValue);
-                
-
             }
+                found.splice(found.indexOf(`${this.abbreviation}`), 1);
+                
             filterSeen(document.querySelector(".selected").id);
 
         } else {
             this.seen = true;
             document.getElementById(`${this.abbreviation}`).classList.add('found');
+            found.push(`${this.abbreviation}`);
             score(this.pointValue);
             filterSeen(document.querySelector(".selected").id);
         }
@@ -61,7 +67,6 @@ plates.forEach(element => {
 //functions
 
 //score system 
-let totalScore = 0;
 const score = (pointValue) => {
     totalScore += pointValue;
     document.querySelector('.current-score').innerHTML = `${totalScore} / 50`;
@@ -102,7 +107,6 @@ const filterSeen = (whichFilter) =>{
         for (let index = 0; index < foundPlates.length; index++) {
             foundPlates[index].classList.remove('hidden');
         }
-            console.log('Something went wrong');
             break;
     }
 
