@@ -150,7 +150,7 @@ table {
   position: sticky;
   top: 0;
   background: lightgray;
-  z-index: 5;
+  z-index: 10;
 }
 .bottom-container {
   z-index: 0;
@@ -252,46 +252,53 @@ table {
   flex-wrap: wrap;
 }
 .all-license-plates .license-plate {
-  border: 1px solid green;
   font-family: 'license_plateregular';
   min-width: 150px;
   max-width: 25%;
-  min-height: 100px;
-  max-height: 536px;
+  min-height: 85px;
   opacity: .8;
   background: white;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position: relative;
+  box-sizing: border-box;
+}
+.all-license-plates .license-plate .licensePlateTitle {
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 0;
-  box-sizing: border-box;
+  position: absolute;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+  z-index: 10;
+  opacity: 0;
 }
-.all-license-plates .license-plate:hover {
-  background-color: #efefef;
-  border: .5px solid gray;
-  box-sizing: border-box;
+.all-license-plates .license-plate .licensePlateTitle:hover {
+  opacity: 1;
   cursor: pointer;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 .all-license-plates .license-plate .plateImage {
   width: 100%;
   height: auto;
-  z-index: 1;
-}
-.all-license-plates .license-plate .plateImage:hover {
-  opacity: 1;
-}
-.all-license-plates .license-plate .licensePlateTitle {
-  border: 1px solid blue;
-  color: black;
-  font-weight: bold;
-  font-size: 34px;
-  z-index: 3;
+  z-index: 2;
   position: absolute;
-  display: flex;
-  align-items: center;
 }
-.all-license-plates .license-plate .licensePlateTitle:hover {
-  z-index: 20;
+.all-license-plates .license-plate .plate-status {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: rgba(38, 214, 56, 0.3);
+  z-index: 3;
 }
 .all-license-plates .found {
   background-color: rgba(38, 214, 56, 0.3);

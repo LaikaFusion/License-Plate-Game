@@ -26,7 +26,7 @@ class PlateCard {
                 score(-this.pointValue);
             }
                 found.splice(found.indexOf(`${this.abbreviation}`), 1);
-                
+
             filterSeen(document.querySelector(".selected").id);
 
         } else {
@@ -42,7 +42,7 @@ class PlateCard {
         divConstr.className = "license-plate";
         divConstr.setAttribute('id', `${this.abbreviation}`);
         let titleSpan = document.createElement("span");
-        titleSpan.className = "licenesePlateTitle";
+        titleSpan.className = "licensePlateTitle";
         titleSpan.textContent = `${this.name}`
         divConstr.appendChild(titleSpan);
         let plateImg = document.createElement("IMG");
@@ -66,9 +66,10 @@ plates.forEach(element => {
 
 //functions
 
-//score system 
+//score system
 const score = (pointValue) => {
     totalScore += pointValue;
+    updateCookie();
     document.querySelector('.current-score').innerHTML = `${totalScore} / 50`;
 }
 
@@ -76,31 +77,31 @@ const filterSeen = (whichFilter) =>{
     const foundPlates  = document.querySelectorAll(".license-plate ");
     for (let index = 0; index < filterButtons.length; index++) {
        filterButtons[index].classList.remove('selected');
-        
+
     }
     document.querySelector(`#${whichFilter}`).classList.add('selected');
     switch (whichFilter) {
         case "Missing":
-        
+
         for (let index = 0; index < foundPlates.length; index++) {
             if(foundPlates[index].classList.contains('found')){
                 foundPlates[index].classList.add('hidden');
             }
             else{
                 foundPlates[index].classList.remove('hidden');
-            }     
+            }
         }
             break;
-        
+
         case "Found":
-            
+
             for (let index = 0; index < foundPlates.length; index++) {
                 if(foundPlates[index].classList.contains('found') !== true){
                     foundPlates[index].classList.add('hidden');
                 }
                 else{
                     foundPlates[index].classList.remove('hidden');
-                }       
+                }
             }
             break;
         default:
@@ -132,7 +133,7 @@ const filterSeen = (whichFilter) =>{
 // })
 
 
-//listeners 
+//listeners
 
 for (let index = 0; index < filterButtons.length; index++) {
     filterButtons[index].addEventListener('click', () => { filterSeen(filterButtons[index].id)});
