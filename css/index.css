@@ -263,6 +263,8 @@ table {
 }
 .all-license-plates .license-plate:hover {
   background-color: #efefef;
+  border: .5px solid gray;
+  box-sizing: border-box;
 }
 .all-license-plates .found {
   background-color: rgba(38, 214, 56, 0.3);
