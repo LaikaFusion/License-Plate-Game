@@ -6,7 +6,7 @@
     font-family: 'license_plateregular';
     src: url('licenseplate-webfont.eot');
     src: url('licenseplate-webfont.eot?#iefix') format('embedded-opentype'),
-         url('licenseplate-webfont.woff2') format('woff2'),
+         /* url('licenseplate-webfont.woff2') format('woff2'), */
          url('licenseplate-webfont.woff') format('woff'),
          url('licenseplate-webfont.ttf') format('truetype'),
          url('licenseplate-webfont.svg#license_plateregular') format('svg');

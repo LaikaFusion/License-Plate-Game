@@ -30,11 +30,17 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  h1, .menu-icon {
+  h1 {
     // border: 1px solid purple;
     font-family: 'license_plateregular', arial, sans-serif;
+    font-size: 30px;
     margin: 10px;
+    width: 100%;
     color: white;
+  }
+  .menu-icon {
+    // border: 1px solid purple;
+    margin: 10px;
   }
 }//top-bar
 
@@ -50,7 +56,7 @@
   }//h5
   .current-score {
     // border: 1px solid purple;
-    margin: 10px;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,21 +68,18 @@
 
 .filter {
   border: 1px solid black;
-  margin-top: 10px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   @media @small {
     flex-direction: column;
   }
-  &:hover {
-    background: white;
-  }
   .row {
-    // border: 1px solid purple;
+    border: 1px solid purple;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-
+    width: 100%;
   }//rox
   .btn {
     border: 1px solid green;
@@ -92,27 +95,13 @@
     background: navy;
     color: white;
   }//selected
-}//filter
-
-.search {
-  // border: 1px solid yellow;
-  margin-top: 10px;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  @media @small {
-    flex-direction: column;
-  }
-  h5 {
-    border: 1px solid green;
-    padding: 10px;
-  }
   .search-bar {
     border: 1px solid blue;
     height: 20px;
     margin: 10px;
+    width: 100%;
   }//search-bar
-}//search
+}//filter
 
 .all-license-plates {
   // border: 1px solid pink;

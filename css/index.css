@@ -163,11 +163,15 @@ table {
   align-items: center;
   padding: 10px;
 }
-.top-bar h1,
-.top-bar .menu-icon {
+.top-bar h1 {
   font-family: 'license_plateregular', arial, sans-serif;
+  font-size: 30px;
   margin: 10px;
+  width: 100%;
   color: white;
+}
+.top-bar .menu-icon {
+  margin: 10px;
 }
 .scoreboard {
   display: flex;
@@ -181,7 +185,6 @@ table {
   margin: 10px;
 }
 .scoreboard .current-score {
-  margin: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -191,22 +194,21 @@ table {
 }
 .filter {
   border: 1px solid black;
-  margin-top: 10px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 @media (max-width: 500px) {
   .filter {
     flex-direction: column;
   }
 }
-.filter:hover {
-  background: white;
-}
 .filter .row {
+  border: 1px solid purple;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  width: 100%;
 }
 .filter .btn {
   border: 1px solid green;
@@ -222,25 +224,11 @@ table {
   background: navy;
   color: white;
 }
-.search {
-  margin-top: 10px;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-}
-@media (max-width: 500px) {
-  .search {
-    flex-direction: column;
-  }
-}
-.search h5 {
-  border: 1px solid green;
-  padding: 10px;
-}
-.search .search-bar {
+.filter .search-bar {
   border: 1px solid blue;
   height: 20px;
   margin: 10px;
+  width: 100%;
 }
 .all-license-plates {
   display: flex;
