@@ -349,6 +349,7 @@ let plates = [{
         "found": false,
     }
 ]
+
 for (let i = 0; i < plates.length; i++) {
     plates[i].img = `img/${plates[i].name}.png`
     plates[i].img = plates[i].img.split(" ").join("_");
