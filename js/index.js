@@ -10,21 +10,22 @@ class PlateCard{
         this.img = element.img;
         this.pointValue = element.pointValue;
         this.found = false;
-        console.log(this.element);
     }
         
     seenToggle(){
-        debugger;
         if(this.seen){
             this.seen = false;
             if(document.getElementById(`${this.abbreviation}`).classList.contains('found')){
                 document.getElementById(`${this.abbreviation}`).classList.remove('found');
+                score(-this.pointValue);
+
             }
             
         }
         else{
             this.seen = true;
             document.getElementById(`${this.abbreviation}`).classList.add('found');
+            score(this.pointValue);
         }
     }
     createCard(){
@@ -52,3 +53,16 @@ plates.forEach(element => {
     const plate = new PlateCard(element);
     plate.createCard();
 });
+
+
+//functions
+
+let totalScore = 0;
+
+
+const score = (pointValue) =>{
+
+    totalScore += pointValue;
+    document.querySelector('.current-score').innerHTML = totalScore;
+
+}
