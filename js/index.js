@@ -2,7 +2,6 @@
 const licenesePlateArea = document.querySelector(".all-license-plates");
 const filterButtons = document.querySelectorAll(".filterBtn");
 
-
 //global variables
 
 let totalScore = 0;
@@ -113,20 +112,24 @@ const filterSeen = (whichFilter) =>{
 
 
 }
+
 //search system
 // Search button needed for Event Listener
-const searchButton = document.querySelector(".searchButton")
-// Search input field to get text data they are searching for
-const searchInputField = document.querySelector(".searchInputField")
+// const searchButton = document.querySelector(".searchButton")
+// // Search input field to get text data they are searching for
+// const searchInputField = document.querySelector(".searchInputField")
 
-// empty string containing our search data
-let searchInputData = "";
+// // empty string containing our search data
+// let searchInputData = "";
 
-searchButton.addEventListener("click", () => {
-    //.value gets search input text that they've typed
-    searchInputData = searchInputField.value;
-    console.log(searchInputData);
-})
+// searchButton.addEventListener("click", () => {
+//     //.value gets search input text that they've typed
+//     searchInputData = searchInputField.value.toLowerCase();
+//     if (searchInputData == document.getElementById('AK')) {
+
+//     }
+//     console.log(searchInputData);
+// })
 
 
 //listeners
@@ -134,3 +137,11 @@ searchButton.addEventListener("click", () => {
 for (let index = 0; index < filterButtons.length; index++) {
     filterButtons[index].addEventListener('click', () => { filterSeen(filterButtons[index].id)});
 }
+
+
+document.querySelector('#clearData').addEventListener('click', () => { deleteCookie()
+    found = [];
+    totalScore = 0;
+    score(0);
+
+});
