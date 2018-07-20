@@ -19,13 +19,16 @@ class PlateCard {
             if (document.getElementById(`${this.abbreviation}`).classList.contains('found')) {
                 document.getElementById(`${this.abbreviation}`).classList.remove('found');
                 score(-this.pointValue);
+                
 
             }
+            filterSeen(document.querySelector(".selected").id);
 
         } else {
             this.seen = true;
             document.getElementById(`${this.abbreviation}`).classList.add('found');
             score(this.pointValue);
+            filterSeen(document.querySelector(".selected").id);
         }
     }
     createCard() {
@@ -110,5 +113,4 @@ const filterSeen = (whichFilter) =>{
 
 for (let index = 0; index < filterButtons.length; index++) {
     filterButtons[index].addEventListener('click', () => { filterSeen(filterButtons[index].id)});
-    
 }
