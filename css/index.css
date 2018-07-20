@@ -252,11 +252,10 @@ table {
   flex-wrap: wrap;
 }
 .all-license-plates .license-plate {
-  border: 1px solid green;
   font-family: 'license_plateregular';
   min-width: 150px;
   max-width: 25%;
-  min-height: 90px;
+  min-height: 85px;
   opacity: .8;
   background: white;
   justify-content: center;
@@ -281,7 +280,8 @@ table {
 .all-license-plates .license-plate .licensePlateTitle:hover {
   opacity: 1;
   cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 .all-license-plates .license-plate .plateImage {
   width: 100%;
