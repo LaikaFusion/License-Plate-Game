@@ -1,3 +1,138 @@
+/*------------------------------------*\
+RESET
+\*------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0b1 | 201101
+NOTE:WORK IN PROGRESS
+USE WITH CAUTION AND TEST WITH ABANDON */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: ’’;
+  content: none;
+}
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 .container {
   border: 1px solid red;
   margin: 0 auto;
@@ -22,7 +157,11 @@
 }
 .scoreboard h5 {
   border: 1px solid purple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 10px;
+  margin: 10px;
 }
 .scoreboard .current-score {
   border: 1px solid purple;
@@ -47,16 +186,47 @@
 .search .search-bar {
   border: 1px solid blue;
   height: 20px;
-  width: 50%;
+  margin: 10px;
+}
+.filter {
+  border: 1px solid red;
+}
+.filter .row {
+  border: 1px solid purple;
+  display: flex;
+  justify-content: space-around;
+}
+.filter .btn {
+  border: 1px solid green;
+  padding: 3px 10px;
+  margin: 10px;
+}
+.filter .btn:hover {
+  background: navy;
+  opacity: .3;
+  color: white;
+}
+.filter .selected {
+  background: navy;
+  color: white;
 }
 .all-license-plates {
   border: 1px solid pink;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 .all-license-plates .license-plate {
   margin: 10px;
   width: 80px;
   height: 30px;
-  background: teal;
+  opacity: .8;
+  background: #C0c0c0;
+}
+.all-license-plates .license-plate:hover {
+  opacity: 1;
+}
+.all-license-plates .found {
+  background-color: green;
+  opacity: .3;
 }

@@ -1,11 +1,12 @@
 @import 'mixins.less';
+@import 'reset.less';
 
 .container {
   border: 1px solid red;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-}
+}//container
 
 .top-bar {
   border: 1px solid green;
@@ -16,15 +17,17 @@
     border: 1px solid purple;
     margin: 10px;
   }
-}
+}//top-bar
 .scoreboard {
   border: 1px solid black;
   display: flex;
   justify-content: center;
   h5 {
     border: 1px solid purple;
+    .center;
     padding: 10px;
-  }
+    margin: 10px;
+  }//h5
   .current-score {
     border: 1px solid purple;
     margin: 10px;
@@ -34,8 +37,8 @@
     padding: 10px;
     font-size: 30px;
     font-weight: bold;
-  }
-}
+  }//current-score
+}//scoreboard
 
 .search {
   border: 1px solid yellow;
@@ -47,20 +50,50 @@
   .search-bar {
     border: 1px solid blue;
     height: 20px;
-    width: 50%;
-  }
-}
+    margin: 10px;
+  }//search-bar
+}//search
+
+.filter {
+  border: 1px solid red;
+  .row {
+    border: 1px solid purple;
+    display: flex;
+    justify-content: space-around;
+  }//rox
+  .btn {
+    border: 1px solid green;
+    padding: 3px 10px;
+    margin: 10px;
+    &:hover{
+      background: navy;
+      opacity: .3;
+      color: white;
+    }
+  }//btn
+  .selected{
+    background: navy;
+    color: white;
+  }//selected
+}//filter
 
 .all-license-plates {
   border: 1px solid pink;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  // justify-content: flex-start;
-  // align-items: flex-start;
   .license-plate {
     margin: 10px;
     width: 80px;
     height: 30px;
-    background: teal;
+    opacity: .8;
+    background: #C0c0c0;
+    &:hover{
+      opacity: 1;
+    }
+  }//license-plate
+  .found {
+    background-color: green;
+    opacity: .3;
   }
-}
+}//all-license-plate
