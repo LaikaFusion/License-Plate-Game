@@ -57,5 +57,9 @@
   margin: 10px;
   width: 80px;
   height: 30px;
-  background: teal;
+  background: #C0c0c0;
+}
+.all-license-plates .found {
+  background-color: green;
+  opacity: .3;
 }
