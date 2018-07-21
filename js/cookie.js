@@ -10,7 +10,6 @@ const deleteCookie = () =>{
 
 const readCookie = () => {
     let cookieResults = document.cookie;
-    debugger;
     if(cookieResults !=="found="){
         let cookiefound = cookieResults.split('=')[1].split(',');
         cookiefound.forEach(element => {

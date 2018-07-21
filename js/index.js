@@ -6,6 +6,7 @@ const filterButtons = document.querySelectorAll(".filterBtn");
 
 let totalScore = 0;
 let found = [];
+let animations = ["bounce","flash","pulse",	"rubberBand","shake","headShake","swing","tada","wobble","jello"]
 
 //classes
 class PlateCard {
@@ -38,7 +39,8 @@ class PlateCard {
     }
     createCard() {
         let divConstr = document.createElement("div");
-        divConstr.className = "license-plate";
+        divConstr.className = "license-plate animated";
+     
         divConstr.setAttribute('id', `${this.abbreviation}`);
         let titleSpan = document.createElement("span");
         titleSpan.className = "licensePlateTitle";
@@ -50,9 +52,20 @@ class PlateCard {
         divConstr.appendChild(plateImg);
         divConstr.addEventListener('click', () => {
             this.seenToggle();
+            this.randomAnimation();
         });
         licenesePlateArea.appendChild(divConstr);
 
+    }
+    randomAnimation(){
+        const anToRun = animations[Math.floor(Math.random() * 10) ];
+        const effectedElement = document.getElementById(`${this.abbreviation}`)
+        effectedElement.classList.add(anToRun);
+
+        setTimeout(function () {
+            effectedElement.classList.remove(anToRun)
+    
+        }, 1000);
     }
 
 }
