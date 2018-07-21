@@ -148,8 +148,9 @@ document.querySelector('#clearData').addEventListener('click', () => { deleteCoo
     const foundPlatesArr  = document.querySelectorAll(".license-plate ");
     for (let i = 0; i < foundPlatesArr.length; i++) {
         console.log(foundPlatesArr)
-        if (foundPlatesArr[i].classList.contains('found') === true){
-            foundPlatesArr[i].classList.remove('found');
+        if (foundPlatesArr[i].classList.contains("found") === true){
+            foundPlatesArr[i].classList.remove("found");
+            foundPlatesArr[i].classList.add("hidden");
         }
         else {
             // do nothing
