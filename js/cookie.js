@@ -10,7 +10,8 @@ const deleteCookie = () =>{
 
 const readCookie = () => {
     let cookieResults = document.cookie;
-    if(cookieResults){
+    debugger;
+    if(cookieResults !=="found="){
         let cookiefound = cookieResults.split('=')[1].split(',');
         cookiefound.forEach(element => {
             
@@ -22,13 +23,16 @@ const readCookie = () => {
 }
 
 const simulateClick = (ID)=> {
-    const event = new MouseEvent('click', {
-      view: window,
-      bubbles: true,
-      cancelable: true
-    });
-    const cb = document.getElementById(ID); 
-    cb.dispatchEvent(event);
+
+        const event = new MouseEvent('click', {
+            view: window,
+            bubbles: true,
+            cancelable: true
+          });
+          const cb = document.getElementById(ID); 
+          cb.dispatchEvent(event);
+    
+    
     
   }
 
