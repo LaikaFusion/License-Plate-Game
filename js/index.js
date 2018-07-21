@@ -75,7 +75,7 @@ const score = (pointValue) => {
 const filterSeen = (whichFilter) =>{
     const foundPlates  = document.querySelectorAll(".license-plate ");
     for (let index = 0; index < filterButtons.length; index++) {
-       filterButtons[index].classList.remove('selected');
+        filterButtons[index].classList.remove('selected');
 
     }
     document.querySelector(`#${whichFilter}`).classList.add('selected');
@@ -145,4 +145,14 @@ document.querySelector('#clearData').addEventListener('click', () => { deleteCoo
     totalScore = 0;
     score(0);
 
+    const foundPlatesArr  = document.querySelectorAll(".license-plate ");
+    for (let i = 0; i < foundPlatesArr.length; i++) {
+        console.log(foundPlatesArr)
+        if (foundPlatesArr[i].classList.contains('found') === true){
+            foundPlatesArr[i].classList.remove('found');
+        }
+        else {
+            // do nothing
+        }
+    }
 });
