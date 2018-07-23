@@ -10,7 +10,8 @@ There is currently no back end so just copy to your prefered html server.
 ## Built With
 
 * HTML
-*CSS
+
+* CSS
 
 * Javascript
 
@@ -21,9 +22,9 @@ All pull requests welcome!
 
 ## Authors
 
-* **Andrew McLaughlin** *
-* **Mike Kerbleski** *
-* **Sawyer Zincone** *
+* [**Andrew McLaughlin**](https://github.com/LaikaFusion) 
+* [**Mike Kerbleski**](https://github.com/MKerbleski) 
+* [**Sawyer Zincone**](https://github.com/szincone) 
 
 
 ## License
