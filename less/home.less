@@ -12,7 +12,9 @@
   top: 0;
   background: lightgray;
   z-index: 10;
-}
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+       box-shadow: 0 8px 6px -6px black;}
 
 .bottom-container {
   z-index: 0;
@@ -28,16 +30,20 @@
   justify-content: center;
   align-items: center;
   padding: 10px;
+  position: relative;
   h1 {
     // border: 1px solid purple;
     text-align: center;
-    font-family: 'license_plateregular', arial, sans-serif;
+      font-family: 'license_plateregular', arial, sans-serif;
     font-size: 30px;
     margin: 10px;
     width: 100%;
     color: white;
   }
   #menuButton {
+    position: absolute;
+    top: .5em;
+    right: 20px;
     font-size: 40px;
     color: white;
     transition: 1s ;
@@ -58,6 +64,7 @@
    box-shadow:         inset 0 0 10px #000000;
    justify-content: center;
    align-items: center;
+   flex-direction: column;
 }
 .optionsMenuOpened{
   display:flex;
@@ -67,7 +74,7 @@
   width: 6em;
   height: 2em;
   border: 1px solid gray;
-  font-family: 'license_plateregular';
+    font-family: 'license_plateregular',sans-serif;
   padding: 3px 10px;
   margin: 10px;
   background: white;
@@ -83,6 +90,7 @@
   // border: 1px solid red;
   display: flex;
   justify-content: center;
+  font-family: sans-serif;
   h5 {
     // border: 1px solid purple;
     .center;
@@ -98,16 +106,20 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
-    font-size: 30px;
+    font-size: 50px;
     font-weight: bold;
   }//current-score
 }//scoreboard
 
 .filter {
-  border: 1px solid black;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  font-size:24px;
+    font-family: 'license_plateregular',sans-serif;
+ 
+
   @media @small {
     flex-direction: column;
   }
@@ -120,7 +132,7 @@
   }//rox
   .btn {
     border: 1px solid gray;
-    font-family: 'license_plateregular';
+      font-family: 'license_plateregular',sans-serif;
     padding: 3px 10px;
     margin: 10px;
     background: white;
@@ -145,23 +157,31 @@
   }
   .search-bar {
     // border: 1px solid blue;
-    height: 20px;
+    height: 4em;
     margin: 10px;
     width: 100%;
   }//search-bar
 }//filter
+.licenesePlateContainer{
+  background-color: black;
+  
 
+}
 .all-license-plates {
   // border: 1px solid pink;
+  max-width: 130vh;
+  margin:auto;
+
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  align-content: center;
   .license-plate {
     // border: 1px solid green;
-    font-family: 'license_plateregular';
-    min-width: 150px;
+      font-family: 'license_plateregular',sans-serif;
+    min-width: 30vh;
     max-width: 25%;
-    min-height: 85px;
+    min-height: 17vh;
     opacity: .8;
     background: white;
     justify-content: center;
@@ -169,6 +189,7 @@
     z-index: 1;
     position: relative;
     box-sizing: border-box;
+    margin: 10px;
     .licensePlateTitle {
       width: 100%;
       height: 100%;
@@ -205,7 +226,9 @@
   }//license-plate
   .found {
     background-color: rgba(38, 214, 56, .3);
+    filter: grayscale(100%);
   }
+  
   .missing {
     background-color: rgba(255, 132, 132, .3);
   }
@@ -213,4 +236,36 @@
 
 .hidden {
   display: none !important;
+}
+
+.searchInputField{
+  height: 1.5em;
+
+   width: 50vh;
+  font-size: 24px;
+  text-align: center;
+}
+
+.credits{
+  display:none;
+  background-color: white;
+  position: absolute;
+  top: 40vh;
+  border-radius: 6px;
+  font-size: 36px;
+  font-family: sans-serif;
+  padding: 50px 100px;
+  -webkit-box-shadow: 0px 0px 37px 10px rgba(0,0,0,0.54);
+  -moz-box-shadow: 0px 0px 37px 10px rgba(0,0,0,0.54);
+  box-shadow: 0px 0px 37px 10px rgba(0,0,0,0.54);
+}
+.creditsDisplayed{
+  display:flex;
+}
+
+#creditsButton{
+  background-color: white;
+  color: #627468;
+  padding: 5px;
+  border-radius: 5px;
 }
