@@ -2,84 +2,96 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>License Plate Game</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css\fonts\webfontkit-20180720-133218\stylesheet.css">
-    <link rel="stylesheet" type="text/css" href="css\animate.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/index.css" />
-    <script src="js/plateStore.js"></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>License Plate Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css\fonts\webfontkit-20180720-133218\stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="css\animate.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/index.css" />
+  <script src="js/plateStore.js"></script>
 
 </head>
 
 <body>
 
-    <div class="container">
+  <div class="container">
 
-      <div class="top-containter">
+    <div class="top-containter">
 
-        <div class="top-bar">
-          <h1>License Plate Game</h1>
-          <!-- <div class="menu-icon">
+      <div class="top-bar">
+        <h1>License Plate Game</h1>
+        <!-- <div class="menu-icon">
             <img src="img\nav-hamburger.png" alt="hamburger menu">
           </div> -->
-          <div id="menuButton">◀</div>
-        </div><!-- top bar-->
-        <div class="optionsMenu">
-          <div id="clearData">Clear data </div>
-          <div id="creditsButton">Credits!</div>
-          <div class="credits">Made by
-            <ul>
-              <li><a href="https://github.com/LaikaFusion">Andrew M.</a></li>
-              <li><a href="https://github.com/MKerbleski">Mike K.
-              </a></li>
-              <li><a href="https://github.com/szincone">Sawyer Z.
+        <div id="menuButton">◀</div>
+      </div>
+      <!-- top bar-->
+      <div class="optionsMenu animated slideInDown">
+        <div id="clearData">Clear data </div>
+        <div id="creditsButton">Credits!</div>
+        <div class="credits">Made by
+          <ul>
+            <li>
+              <a href="https://github.com/LaikaFusion">Andrew M.</a>
+            </li>
+            <li>
+              <a href="https://github.com/MKerbleski">Mike K.
               </a>
-</li>
+            </li>
+            <li>
+              <a href="https://github.com/szincone">Sawyer Z.
+              </a>
+            </li>
 
 
-            </ul>
-            <br>
-            <br>
-            Made with<br>
-            Animate.css<br>
-          </div>
+          </ul>
+          <br>
+          <br> Made with
+          <br> Animate.css
+          <br>
+        </div>
 
-      </div><!--options Menu-->
-        <div class="scoreboard">
-          <div>
-            <div class="current-score">0 / 50</div>
-          </div>
-        </div><!--scoreboard-->
+      </div>
+      <!--options Menu-->
+      <div class="scoreboard">
+        <div>
+          <div class="current-score">0 / 50</div>
+        </div>
+      </div>
+      <!--scoreboard-->
 
-        <div class="filter">
-          <div class="row">
-            <h6>Show plates that are: </h6>
-          </div>
-          <div class="row">
-            <div id="All" class="btn filterBtn selected">All</div>
-            <div id="Missing" class="btn filterBtn">Missing</div>
-            <div id="Found" class="btn filterBtn">Found</div>
-          </div><!--row-->
-        </div><!--filter-->
+      <div class="filter">
+        <div class="row">
+          <h6>Show plates that are: </h6>
+        </div>
+        <div class="row">
+          <div id="All" class="btn filterBtn selected">All</div>
+          <div id="Missing" class="btn filterBtn">Missing</div>
+          <div id="Found" class="btn filterBtn">Found</div>
+        </div>
+        <!--row-->
+      </div>
+      <!--filter-->
 
-        <div class="filter">
-          <!-- <div class="row">
+      <div class="filter">
+        <!-- <div class="row">
             <h6>Search for state: </h6>
           </div> -->
-          <div class="row">
-            <form class="row search-bar" action="index.html" method="post">
-              <input type="search" class="searchInputField" name="" value="" onkeyup="searchFunction()" placeholder="Search for state">
-            </form>
-          </div>
+        <div class="row">
+          <form class="row search-bar" action="index.html" method="post">
+            <input type="search" class="searchInputField" name="" value="" onkeyup="searchFunction()" placeholder="Search for state">
+          </form>
+        </div>
 
-        </div><!--filter-->
+      </div>
+      <!--filter-->
 
-      </div><!--top-container-->
+    </div>
+    <!--top-container-->
 
-      <div class="bottom-containter">
-        <div class="licenesePlateContainer">
+    <div class="bottom-containter">
+      <div class="licenesePlateContainer">
         <div class="all-license-plates">
 
           <!--<div class="license-plate">
@@ -88,14 +100,17 @@
             <img class="plateImage" src="img\New_Mexico.png" alt="">
           </div>-->
 
-        </div><!--all-license-plates-->
+        </div>
+        <!--all-license-plates-->
       </div>
-      </div><!--bottom-container-->
+    </div>
+    <!--bottom-container-->
 
-    </div><!--container-->
+  </div>
+  <!--container-->
 
-    <script src="js/cookie.js"></script>
-    <script src="js/index.js"></script>
+  <script src="js/cookie.js"></script>
+  <script src="js/index.js"></script>
 
 </body>
 

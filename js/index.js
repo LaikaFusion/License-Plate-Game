@@ -176,3 +176,8 @@ menuButton.addEventListener('click', (event) => {
     menuButton.classList.toggle('menuOpen');
     document.querySelector('.optionsMenu').classList.toggle('optionsMenuOpened')
 });
+
+document.querySelector('#creditsButton').addEventListener('click', (event) => {
+   
+    document.querySelector('.credits').classList.toggle('creditsDisplayed')
+});

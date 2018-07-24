@@ -167,6 +167,7 @@ table {
   align-items: center;
   padding: 10px;
   position: relative;
+  z-index: 4;
 }
 .top-bar h1 {
   text-align: center;
@@ -182,7 +183,7 @@ table {
   right: 20px;
   font-size: 40px;
   color: white;
-  transition: 1s ;
+  transition: 1s;
 }
 .top-bar .menuOpen {
   transform: rotate(-90deg);
@@ -197,6 +198,7 @@ table {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  z-index: 0;
 }
 .optionsMenuOpened {
   display: flex;
@@ -387,6 +389,8 @@ table {
 }
 .creditsDisplayed {
   display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 #creditsButton {
   background-color: white;
