@@ -20,7 +20,7 @@ const readCookie = () => {
 }
 
 const simulateClick = (ID) => {
-
+ console.log(ID);
     const event = new MouseEvent('click', {
         view: window,
         bubbles: true,
