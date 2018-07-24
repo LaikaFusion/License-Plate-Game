@@ -8,10 +8,11 @@ const deleteCookie = () => {
 
 const readCookie = () => {
     let cookieResults = document.cookie;
-    console.log(cookieResults);
-
-    if (cookieResults !== "found=") {
-        let cookiefound = cookieResults.split('=')[1].split(',');
+    let indexOfFound = cookieResults.indexOf('found=');
+    let cutdownCookie = cookieResults.slice(indexOfFound);
+    console.log(cutdownCookie);
+    if (cutdownCookie !== "found=") {
+        let cookiefound = cutdownCookie.split('=')[1].split(',');
         cookiefound.forEach(element => {
 
             simulateClick(element);
