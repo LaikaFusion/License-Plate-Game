@@ -191,7 +191,7 @@ table {
 .optionsMenu {
   display: none;
   background-color: #646464;
-  height: 10vh;
+  height: 12vh;
   -moz-box-shadow: inset 0 0 10px #000000;
   -webkit-box-shadow: inset 0 0 10px #000000;
   box-shadow: inset 0 0 10px #000000;
