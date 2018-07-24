@@ -8,6 +8,8 @@ const deleteCookie = () => {
 
 const readCookie = () => {
     let cookieResults = document.cookie;
+    console.log(cookieResults);
+
     if (cookieResults !== "found=") {
         let cookiefound = cookieResults.split('=')[1].split(',');
         cookiefound.forEach(element => {
@@ -20,7 +22,6 @@ const readCookie = () => {
 }
 
 const simulateClick = (ID) => {
- console.log(ID);
     const event = new MouseEvent('click', {
         view: window,
         bubbles: true,
