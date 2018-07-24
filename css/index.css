@@ -172,8 +172,43 @@ table {
   width: 100%;
   color: white;
 }
-.top-bar .menu-icon {
+.top-bar #menuButton {
+  font-size: 40px;
+  color: white;
+  transition: 1s ;
+}
+.top-bar .menuOpen {
+  transform: rotate(-90deg);
+}
+.optionsMenu {
+  display: none;
+  background-color: #646464;
+  height: 10vh;
+  -moz-box-shadow: inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow: inset 0 0 10px #000000;
+  justify-content: center;
+  align-items: center;
+}
+.optionsMenuOpened {
+  display: flex;
+}
+#clearData {
+  width: 6em;
+  height: 2em;
+  border: 1px solid gray;
+  font-family: 'license_plateregular';
+  padding: 3px 10px;
   margin: 10px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#clearData:hover {
+  color: black;
+  cursor: pointer;
+  background-color: #efefef;
 }
 .scoreboard {
   display: flex;

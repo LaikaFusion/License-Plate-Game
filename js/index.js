@@ -2,6 +2,8 @@
 const licenesePlateArea = document.querySelector(".all-license-plates");
 const filterButtons = document.querySelectorAll(".filterBtn");
 
+const menuButton = document.querySelector("#menuButton");
+
 //global variables
 
 let totalScore = 0;
@@ -168,4 +170,9 @@ document.querySelector('#clearData').addEventListener('click', () => { deleteCoo
             foundPlatesArr[i].classList.remove("found");
         }
     }
+});
+
+menuButton.addEventListener('click', (event) => {
+    menuButton.classList.toggle('menuOpen');
+    document.querySelector('.optionsMenu').classList.toggle('optionsMenuOpened')
 });
